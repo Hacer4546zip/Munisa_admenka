@@ -52,7 +52,7 @@
             position: relative;
             z-index: 20;
             max-width: 90%;
-            width: 400px;
+            width: 100%;
             margin: 0 auto;
             padding: 1rem;
             display: flex;
@@ -63,61 +63,57 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease-out;
         }
         .heart-icon {
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(4px);
             border-radius: 50%;
-            padding: 2rem;
+            padding: 1.5rem;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .heart-icon svg {
-            width: 4rem;
-            height: 4rem;
+            width: 3rem;
+            height: 3rem;
             fill: #ed0000;
         }
         h1 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            transform: perspective(500px) rotateX(10deg);
         }
         .card {
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(4px);
             border-radius: 0.75rem;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
             width: 100%;
+            max-width: 400px;
         }
         .button {
             display: inline-block;
-            width: 90%;
-            padding: 1rem;
-            margin-bottom: 1rem;
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
             border: none;
             border-radius: 0.5rem;
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: bold;
             color: white;
             cursor: pointer;
-            transition: transform 0.1s, background-color 0.3s, box-shadow 0.3s;
+            transition: transform 0.1s, background-color 0.3s;
             text-decoration: none;
             text-align: center;
             animation: fadeInUp 1s ease-out, pulse 2s infinite;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .button:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
         }
         .button:active {
-            transform: translateY(1px) scale(0.98);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transform: scale(0.98);
         }
         .telegram-button {
              background: linear-gradient(to right, #1d9bf9, #009cdb);
@@ -134,19 +130,13 @@
         .special-section, .online-chat {
              background: linear-gradient(to right, #0000009f, #ffffff1c);
             color: white;
-            padding: 1rem;
+            padding: 0.75rem;
             border-radius: 0.5rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             animation: fadeInUp 1s ease-out;
             text-decoration: none;
             display: block;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.1s, box-shadow 0.3s;
-        }
-        .special-section:hover, .online-chat:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
         .green-dot {
             color: #00ff00;
@@ -156,18 +146,18 @@
                 padding: 0.5rem;
             }
             .heart-icon {
-                padding: 1.5rem;
+                padding: 1rem;
             }
             .heart-icon svg {
-                width: 3rem;
-                height: 3rem;
+                width: 2.5rem;
+                height: 2.5rem;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
             .button {
-                font-size: 1rem;
-                padding: 0.8rem;
+                font-size: 0.9rem;
+                padding: 0.6rem;
             }
         }
     </style>
@@ -257,5 +247,3 @@
             }
         `, 0);
     </script>
-</body>
-</html>
