@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
         body {
             background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,8 +28,8 @@
             backdrop-filter: blur(10px);
             transform-style: preserve-3d;
             perspective: 1000px;
-            max-width: 400px;
-            width: 90%;
+            max-width: 450px;
+            width: 150%;
             text-align: center;
             position: relative;
             animation: float 6s ease-in-out infinite;
@@ -121,7 +122,7 @@
         }
 
         @keyframes buttonFloat {
-            0%, 100% { transform: translateZ(200px); }
+            0%, 100% { transform: translateZ(100px); }
             50% { transform: translateZ(30px); }
         }
 
@@ -209,4 +210,3 @@
 
         createSnow();
     </script>
-
