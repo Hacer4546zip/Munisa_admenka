@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +33,8 @@
             padding: 0;
             font-family: Arial, sans-serif;
             height: 100%;
+            width: 100%;
+            overflow-x: hidden;
         }
         .container {
             min-height: 100vh;
@@ -39,9 +43,12 @@
             background-position: center;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -51,15 +58,9 @@
         .content {
             position: relative;
             z-index: 20;
-            max-width: 90%;
-            width: 100%;
+            width: 95%;
+            padding: 1rem 0;
             margin: 0 auto;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
         .header {
             text-align: center;
@@ -70,19 +71,20 @@
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(4px);
             border-radius: 50%;
-            padding: 1.5rem;
+            padding: 1.2rem;
             display: inline-block;
             margin-bottom: 0.5rem;
         }
         .heart-icon svg {
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             fill: #ed0000;
         }
         h1 {
             color: white;
             font-size: 2rem;
             margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         .card {
             background-color: rgba(255, 255, 255, 0.1);
@@ -90,74 +92,59 @@
             border-radius: 0.75rem;
             padding: 1rem;
             text-align: center;
-            width: 100%;
-            max-width: 400px;
+            margin: 0 auto;
         }
         .button {
-            display: inline-block;
+            display: block;
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 0.75rem;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
             border: none;
             border-radius: 0.5rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: white;
             cursor: pointer;
             transition: transform 0.1s, background-color 0.3s;
             text-decoration: none;
             text-align: center;
-            animation: fadeInUp 1s ease-out, pulse 2s infinite;
-        }
-        .button:hover {
-            transform: scale(1.02);
+            animation: fadeInUp 1s ease-out;
         }
         .button:active {
             transform: scale(0.98);
         }
         .telegram-button {
-             background: linear-gradient(to right, #1d9bf9, #009cdb);
-        }
-        .telegram-button:hover {
-            background-color: #0077b3;
+            background: linear-gradient(to right, #1d9bf9, #009cdb);
         }
         .youtube-button {
             background-color: #ff0000;
         }
-        .youtube-button:hover {
-            background-color: #cc0000;
-        }
         .special-section, .online-chat {
-             background: linear-gradient(to right, #0000009f, #ffffff1c);
+            background: linear-gradient(to right, #0000009f, #ffffff1c);
             color: white;
-            padding: 0.75rem;
+            padding: 0.8rem;
             border-radius: 0.5rem;
             text-align: center;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.8rem;
             animation: fadeInUp 1s ease-out;
             text-decoration: none;
             display: block;
+            font-size: 1.1rem;
         }
         .green-dot {
             color: #00ff00;
         }
+        
         @media (max-width: 480px) {
             .content {
-                padding: 0.5rem;
+                width: 92%;
             }
-            .heart-icon {
-                padding: 1rem;
+            .button, .special-section, .online-chat {
+                margin-bottom: 0.6rem;
             }
-            .heart-icon svg {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-            .button {
-                font-size: 0.9rem;
-                padding: 0.6rem;
+            .button svg, .special-section svg, .online-chat svg {
+                width: 1.2rem;
+                height: 1.2rem;
             }
         }
     </style>
@@ -176,7 +163,7 @@
             </header>
             <div class="card">
                 <a href="https://t.me/+_rFTajPX3_1kMTg6" target="_blank" class="button telegram-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                     </svg>
@@ -188,7 +175,7 @@
                     <span class="green-dot">●</span>
                 </a>
                 <a href="https://t.me/+_rFTajPX3_1kMTg6" target="_blank" class="button telegram-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                     </svg>
@@ -204,7 +191,7 @@
                     <span style="color: #3b82f6;">👥</span>
                 </a>
                 <a href="https://youtube.com/channel/UCK5cFXkQ_n8tZqaGL5F49VQ?si=iy7SbifHa9cTn1le" target="_blank" class="button youtube-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
                         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
                         <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                     </svg>
@@ -214,7 +201,6 @@
         </div>
     </div>
     <script>
-        // Snowfall effect
         function createSnowflake() {
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
@@ -247,3 +233,5 @@
             }
         `, 0);
     </script>
+</body>
+</html>
