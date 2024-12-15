@@ -1,5 +1,13 @@
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovchilar - Yangi Yil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
@@ -20,7 +28,7 @@
             transform-style: preserve-3d;
             perspective: 1000px;
             max-width: 450px;
-            width: 150%;
+            width: 100%;
             text-align: center;
             position: relative;
             animation: float 6s ease-in-out infinite;
@@ -83,14 +91,14 @@
             position: absolute;
             inset: 0;
             border-radius: 10px;
-            background: rgba(255,255,255,0.1);
-            transform: translateZ(-10px);
+            background: rgb(252,22,22);
+            transform: translateZ(-26px);
             transition: all 0.3s ease;
         }
 
         .btn:hover {
             transform: translateZ(30px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgb(255,8,8);
         }
 
         .btn:active {
@@ -201,3 +209,6 @@
 
         createSnow();
     </script>
+</body>
+</html>
+
