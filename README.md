@@ -2,35 +2,15 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SOVCHILAR - Telegram Channels</title>
     <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        body, html {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body, html {
             font-family: Arial, sans-serif;
             height: 100%;
             width: 100%;
@@ -48,7 +28,7 @@
             justify-content: center;
         }
         .overlay {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
@@ -58,41 +38,37 @@
         .content {
             position: relative;
             z-index: 20;
-            width: 95%;
-            padding: 1rem 0;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 400px;
+            padding: 1rem;
         }
         .header {
             text-align: center;
             margin-bottom: 1.5rem;
-            animation: fadeInUp 1s ease-out;
         }
         .heart-icon {
             background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(4px);
             border-radius: 50%;
-            padding: 1.2rem;
+            padding: 1rem;
             display: inline-block;
             margin-bottom: 0.5rem;
         }
         .heart-icon svg {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2rem;
+            height: 2rem;
             fill: #ed0000;
         }
         h1 {
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin: 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         .card {
             background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(4px);
             border-radius: 0.75rem;
             padding: 1rem;
             text-align: center;
-            margin: 0 auto;
         }
         .button {
             display: block;
@@ -101,17 +77,12 @@
             margin-bottom: 0.8rem;
             border: none;
             border-radius: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             color: white;
             cursor: pointer;
-            transition: transform 0.1s, background-color 0.3s;
             text-decoration: none;
             text-align: center;
-            animation: fadeInUp 1s ease-out;
-        }
-        .button:active {
-            transform: scale(0.98);
         }
         .telegram-button {
             background: linear-gradient(to right, #1d9bf9, #009cdb);
@@ -126,26 +97,12 @@
             border-radius: 0.5rem;
             text-align: center;
             margin-bottom: 0.8rem;
-            animation: fadeInUp 1s ease-out;
             text-decoration: none;
             display: block;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .green-dot {
             color: #00ff00;
-        }
-        
-        @media (max-width: 480px) {
-            .content {
-                width: 92%;
-            }
-            .button, .special-section, .online-chat {
-                margin-bottom: 0.6rem;
-            }
-            .button svg, .special-section svg, .online-chat svg {
-                width: 1.2rem;
-                height: 1.2rem;
-            }
         }
     </style>
 </head>
@@ -203,7 +160,6 @@
     <script>
         function createSnowflake() {
             const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
             snowflake.style.position = 'fixed';
             snowflake.style.top = '-10px';
             snowflake.style.left = Math.random() * window.innerWidth + 'px';
