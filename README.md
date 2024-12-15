@@ -1,191 +1,212 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SOVCHILAR - Telegram Channels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovchilar - Yangi Yil</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        body, html {
-            font-family: Arial, sans-serif;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
-        }
-        .container {
+
+        body {
+            background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
             min-height: 100vh;
-            background-image: url('');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
         }
-        .overlay {
+
+        .container {
+            background: rgba(30,30,30,0.238);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotateX(0); }
+            50% { transform: translateY(-20px) rotateX(5deg); }
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background: rgba(51, 51, 51, 0.9);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            transform: translateZ(50px);
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .logo:hover {
+            transform: translateZ(70px) scale(1.1);
+        }
+
+
+        .title {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+            transform: translateZ(40px);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+            to { text-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.3); }
+        }
+
+        .btn {
+            display: block;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn::before {
+            content: '';
             position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            transform: translateZ(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .btn:active {
+            transform: translateZ(10px) scale(0.95);
+        }
+
+        .telegram {
+            background: linear-gradient(145deg, #0088cc, #25b4fd);
+            animation: buttonFloat 3s ease-in-out infinite;
+        }
+
+        .chat {
+            background: linear-gradient(145deg, #444, #222);
+            animation: buttonFloat 3s ease-in-out infinite 0.2s;
+        }
+
+        .youtube {
+            background: linear-gradient(145deg, #ff0000, #cc0000);
+            animation: buttonFloat 3s ease-in-out infinite 0.4s;
+        }
+
+        @keyframes buttonFloat {
+            0%, 100% { transform: translateZ(200px); }
+            50% { transform: translateZ(30px); }
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            filter: blur(2px);
+            pointer-events: none;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .snow-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,0.892);
+            pointer-events: none;
+            z-index: 1;
         }
-        .content {
-            position: relative;
-            z-index: 20;
-            width: 90%;
-            max-width: 400px;
-            padding: 1rem;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .heart-icon {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            padding: 1rem;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-        .heart-icon svg {
-            width: 2rem;
-            height: 2rem;
-            fill: #ed0000;
-        }
-        h1 {
-            color: white;
-            font-size: 1.8rem;
-            margin: 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-        .card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-        }
-        .button {
-            display: block;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 0.8rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-        }
-        .telegram-button {
-            background: linear-gradient(to right, #1d9bf9, #009cdb);
-        }
-        .youtube-button {
-            background-color: #ff0000;
-        }
-        .special-section, .online-chat {
-            background: linear-gradient(to right, #0000009f, #ffffff1c);
-            color: white;
-            padding: 0.8rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            margin-bottom: 0.8rem;
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-        }
-        .green-dot {
-            color: #00ff00;
+
+        .container {
+            z-index: 2;
         }
     </style>
 </head>
 <body>
+    <div class="snow-container" id="snow"></div>
+    
     <div class="container">
-        <div class="overlay"></div>
-        <div class="content">
-            <header class="header">
-                <div class="heart-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                </div>
-                <h1>SOVCHILAR</h1>
-            </header>
-            <div class="card">
-                <a href="https://t.me/+_rFTajPX3_1kMTg6" target="_blank" class="button telegram-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                    Telegram
-                </a>
-                <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank" class="special-section">
-                    <span class="green-dot">●</span>
-                    Yangi Qizlar Bor
-                    <span class="green-dot">●</span>
-                </a>
-                <a href="https://t.me/+_rFTajPX3_1kMTg6" target="_blank" class="button telegram-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                    Telegram
-                </a>
-                <a href="https://hacer4546zip.github.io/Munisa_admenka" target="_blank" class="online-chat">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    online chat 7/24
-                    <span style="color: #3b82f6;">👥</span>
-                </a>
-                <a href="https://youtube.com/channel/UCK5cFXkQ_n8tZqaGL5F49VQ?si=iy7SbifHa9cTn1le" target="_blank" class="button youtube-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;">
-                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                    </svg>
-                    YOU TUBE KANAL ❗
-                </a>
-            </div>
+        <div class="logo">
+            <img 
+                src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" 
+                alt="Kelinlar Logo"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+            />
         </div>
+        <h1 class="title">SOVCHILAR</h1>
+        
+        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
+            <i class="fas fa-paper-plane"></i> Telegram
+        </a>
+        
+        <a href="https://hacer4546zip.github.io/Sovchilar" class="btn chat">
+            <i class="fas fa-comments"></i> Online Chat Va Qizlar
+        </a>
+        
+        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
+            <i class="fas fa-paper-plane"></i> Telegram
+        </a>
+        
+        <a href="https://hacer4546zip.github.io/Jonimsankumami/" class="btn chat">
+            <i class="fas fa-globe"></i> Boshqa Elonlar Ko'rish
+        </a>
+        
+        <a href="https://youtube.com/channel/UCK5cFXkQ_n8tZqaGL5F49VQ?si=wUwyEoJszWaSkPKr" class="btn youtube">
+            <i class="fab fa-youtube"></i> YOU TUBE KANAL
+        </a>
     </div>
+
     <script>
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.style.position = 'fixed';
-            snowflake.style.top = '-10px';
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
-            snowflake.innerHTML = '❄';
-            snowflake.style.color = 'white';
-            snowflake.style.zIndex = '1000';
-
-            document.body.appendChild(snowflake);
-
-            const animationDuration = Math.random() * 3 + 2;
-            snowflake.style.animation = `fall ${animationDuration}s linear`;
-
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-            });
+        function createSnow() {
+            const snowContainer = document.getElementById('snow');
+            for(let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.opacity = Math.random();
+                snowflake.style.animation = `snowfall ${Math.random() * 3 + 2}s linear infinite`;
+                snowflake.style.animationDelay = Math.random() * 2 + 's';
+                snowContainer.appendChild(snowflake);
+            }
         }
 
-        setInterval(createSnowflake, 100);
-
-        document.styleSheets[0].insertRule(`
-            @keyframes fall {
-                to {
-                    transform: translateY(${window.innerHeight}px);
-                }
-            }
-        `, 0);
+        createSnow();
     </script>
-</body>
-</html>
+
