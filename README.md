@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -18,7 +16,7 @@
         }
         .container {
             min-height: 100vh;
-            background-image: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg');
+            background-image: url('');
             background-size: cover;
             background-position: center;
             position: relative;
