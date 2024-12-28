@@ -188,7 +188,7 @@
             <i class="fas fa-globe"></i> Boshqa Elonlar Ko'rish
         </a>
         
-        <a href="https://youtube.com/channel/UCK5cFXkQ_n8tZqaGL5F49VQ?si=wUwyEoJszWaSkPKr" class="btn youtube">
+        <a href="https://youtube.com/channel/UCNXs27Km-C6ROiInCveXazA?si=CD0kTzCvlnOVxZkE" class="btn youtube">
             <i class="fab fa-youtube"></i> YOU TUBE KANAL
         </a>
     </div>
