@@ -210,5 +210,3 @@
         createSnow();
     </script>
 </body>
-</html>
-
