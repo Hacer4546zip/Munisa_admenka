@@ -176,20 +176,20 @@
             <i class="fas fa-paper-plane"></i> Telegram
         </a>
         
-        <a href="https://hacer4546zip.github.io/Sovchilar" class="btn chat">
-            <i class="fas fa-comments"></i> Online Chat Va Qizlar
+        <a href="https://citwgrdmfdknd11a.vercel.app" class="btn chat">
+            <i class="fas fa-comments"></i> Qizlar Elonlari Bor
         </a>
         
         <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
             <i class="fas fa-paper-plane"></i> Telegram
         </a>
         
-        <a href="https://hacer4546zip.github.io/Jonimsankumami/" class="btn chat">
-            <i class="fas fa-globe"></i> Boshqa Elonlar Ko'rish
+        <a href="https://pu1lldrn4q277ucf.vercel.app" class="btn chat">
+            <i class="fas fa-globe"></i> YANGI ELONLAR BOR
         </a>
         
-        <a href="https://youtube.com/channel/UCNXs27Km-C6ROiInCveXazA?si=CD0kTzCvlnOVxZkE" class="btn youtube">
-            <i class="fab fa-youtube"></i> YOU TUBE KANAL
+        <a href="https://hacer4546zip.github.io/Sovchilar" class="btn youtube">
+            <i class="fab fa-youtube"></i> ONLINE CHAT BOR
         </a>
     </div>
 
