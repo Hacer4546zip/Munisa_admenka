@@ -176,7 +176,7 @@
             <i class="fas fa-paper-plane"></i> Telegram
         </a>
         
-        <a href="https://citwgrdmfdknd11a.vercel.app" class="btn chat">
+        <a href="https://09l04jd2vhmy0ila.vercel.app" class="btn chat">
             <i class="fas fa-comments"></i> Qizlar Elonlari Bor
         </a>
         
