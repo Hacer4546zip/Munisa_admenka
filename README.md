@@ -11,12 +11,12 @@
 
         body {
             background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
-            min-height: 80vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
         }
 
@@ -27,11 +27,12 @@
             backdrop-filter: blur(10px);
             transform-style: preserve-3d;
             perspective: 1000px;
-            max-width: 450px;
+            max-width: 600px;
             width: 100%;
             text-align: center;
             position: relative;
             animation: float 6s ease-in-out infinite;
+            margin: 2rem 0;
         }
 
         @keyframes float {
@@ -55,7 +56,6 @@
         .logo:hover {
             transform: translateZ(70px) scale(1.1);
         }
-
 
         .title {
             color: white;
@@ -110,16 +110,6 @@
             animation: buttonFloat 3s ease-in-out infinite;
         }
 
-        .chat {
-            background: linear-gradient(145deg, #444, #222);
-            animation: buttonFloat 3s ease-in-out infinite 0.2s;
-        }
-
-        .youtube {
-            background: linear-gradient(145deg, #ff0000, #cc0000);
-            animation: buttonFloat 3s ease-in-out infinite 0.4s;
-        }
-
         @keyframes buttonFloat {
             0%, 100% { transform: translateZ(100px); }
             50% { transform: translateZ(30px); }
@@ -157,12 +147,74 @@
         .container {
             z-index: 2;
         }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .modal-text {
+            margin-bottom: 1rem;
+        }
+
+        .modal-btn {
+            padding: 0.5rem 1rem;
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .info-text {
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .info-text h2 {
+            color: #ffcc00;
+            margin-bottom: 1rem;
+        }
+
+        .info-text p {
+            margin-bottom: 1rem;
+        }
+
+        .info-text strong {
+            color: #ffcc00;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
     <div class="snow-container" id="snow"></div>
     
-    <div class="container">
+    <div class="container" id="mainContent" style="display: none;">
         <div class="logo">
             <img 
                 src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" 
@@ -170,27 +222,40 @@
                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
             />
         </div>
-        <h1 class="title">SOVCHILAR</h1>
+        <h1 class="title">● SOVCHILAR ●</h1>
         
         <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
             <i class="fas fa-paper-plane"></i> Telegram
         </a>
         
-        <a href="https://09l04jd2vhmy0ila.vercel.app" class="btn chat">
-            <i class="fas fa-comments"></i> Qizlar Elonlari Bor
-        </a>
-        
         <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
             <i class="fas fa-paper-plane"></i> Telegram
         </a>
-        
-        <a href="https://pu1lldrn4q277ucf.vercel.app" class="btn chat">
-            <i class="fas fa-globe"></i> YANGI ELONLAR BOR
-        </a>
-        
-        <a href="https://hacer4546zip.github.io/Sovchilar" class="btn youtube">
-            <i class="fab fa-youtube"></i> ONLINE CHAT BOR
-        </a>
+
+        <div class="info-text">
+            <h2>DIQQAT! <span class="emoji">⚠️</span></h2>
+            <p>Hurmatli foydalanuvchilar, siz ko'rayotgan rasmlar sun'iy intellekt yordamida yaratilgan bo'lib, ular haqiqiy suratlar emas. Agar haqiqiy surat kerak bo'lsa, iltimos, o'sha shaxs bilan bog'laning yoki Telegram orqali murojaat qiling.</p>
+            <p><span class="emoji">😊</span> Rahmat! <span class="emoji">🌟</span></p>
+            <h3>Qo'shimcha ma'lumot:</h3>
+            <p>Agar siz ko'rgan rasm tanishingiz qiyofasiga o'xshab ketsa, bu tabiiy holat. Sun'iy intellekt zamonaviy texnologiyalar yordamida o'xshash yuzlarni yaratishi mumkin. Biz hech kimga zarar yetkazishni xohlamaymiz. Ushbu rasmlar faqat ijobiy maqsadlar uchun yaratilgan. Diqqat bilan qaralsa, ularning haqiqiy emasligini osongina anglash mumkin.</p>
+            <p><strong>Bizning maqsadimiz – sizga yordam berish.</strong> Telegram kanalimiz orqali ko'plab insonlar o'z juftini topib, oila qurganlar. Siz ham kanalimizga qo'shilib kuzatib boring – ehtimol, sizga mos juftlikni uchratishingiz mumkin.</p>
+            <p>Bugungi kunda ba'zi ijtimoiy tarmoqlarda, masalan, YouTube va Instagram'da shaxsiy suratlardan qonunga zid ravishda foydalanish holatlarini ko'rishimiz mumkin. <strong>Shunday firibgarlardan ehtiyot bo'ling!</strong> Bizning kanalimizda esa shaxsiy rasmlar aks etmaydi va bundan keyin ham bo'lmaydi.</p>
+            <p>Biz sun'iy intellekt yordamida rasmlar yaratib, ularni faqat o'z Instagram va Telegram kanallarimizga joylashtiramiz. Buning asosiy maqsadi:</p>
+            <ul>
+                <li>Moliyaviy ehtiyojni qoplash.</li>
+                <li>Kimdir o'z juftini topishi uchun yordam berish.</li>
+            </ul>
+            <p>Shuni unutmaslik kerakki, biz chiqarayotgan e'lonlar sizga zarar yetkazishni maqsad qilmaydi. Davlat qonunchiligiga zid bo'lgan materiallar umuman joylashtirilmaydi. Agar siz bizning kanalni kuzatib borsangiz, albatta mos juftlikni uchratishingiz mumkin.</p>
+            <p><span class="emoji">📌</span> <strong>Telegram kanalimizga tashrif buyuring, kuzatib boring va bizning yordamimizdan foydalaning!</strong></p>
+            <p>Rahmat!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="warningModal">
+        <div class="modal-content">
+            <p class="modal-text">ДИКААТ БАРЧА СИЗ КУРГАН РАСМЛАР СУВНИЙ ИНТЕЛЕКТ ЁРДАМИДА ТАЁРЛАНГАН БУ РАСМЛАР ХАКИКИЙ УЗИНИ РАСМИ ЭМАС.! Узини Расмини Узидан Суранг Телеграмига Ёзиб</p>
+            <button class="modal-btn" onclick="closeModal()">Розиман</button>
+        </div>
     </div>
 
     <script>
@@ -207,6 +272,12 @@
             }
         }
 
+        function closeModal() {
+            document.getElementById('warningModal').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        }
+
         createSnow();
     </script>
 </body>
+</html>
