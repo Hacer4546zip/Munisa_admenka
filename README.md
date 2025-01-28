@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovchilar - Yangi Yil</title>
+    <title>Sovchilar - Muhim Ma'lumot</title>
     <style>
         * {
             margin: 0;
@@ -10,274 +10,187 @@
         }
 
         body {
-            background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            position: relative;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
         }
 
         .container {
-            background: rgba(30,30,30,0.238);
-            padding: 2rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            animation: float 6s ease-in-out infinite;
-            margin: 2rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotateX(0); }
-            50% { transform: translateY(-20px) rotateX(5deg); }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .logo {
             width: 150px;
             height: 150px;
-            background: rgba(51, 51, 51, 0.9);
             border-radius: 50%;
-            margin: 0 auto 30px;
-            position: relative;
-            transform: translateZ(50px);
-            transition: transform 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-
-        .logo:hover {
-            transform: translateZ(70px) scale(1.1);
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
         .title {
-            color: white;
-            font-size: 2em;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
-            transform: translateZ(40px);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-            to { text-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.3); }
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
 
         .btn {
-            display: block;
-            margin: 1rem 0;
-            padding: 1rem;
-            border-radius: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(145deg, #0088cc, #25b4fd);
+            color: #fff;
             text-decoration: none;
-            color: white;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
             font-weight: bold;
-            position: relative;
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            transform: translateZ(20px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 10px;
-            background: rgb(252,22,22);
-            transform: translateZ(-26px);
-            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
         }
 
         .btn:hover {
-            transform: translateZ(30px) scale(1.05);
-            box-shadow: 0 10px 25px rgb(255,8,8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
         }
 
-        .btn:active {
-            transform: translateZ(10px) scale(0.95);
+        .info-block {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid;
         }
 
-        .telegram {
-            background: linear-gradient(145deg, #0088cc, #25b4fd);
-            animation: buttonFloat 3s ease-in-out infinite;
+        .warning {
+            border-color: #ff4444;
+            background-color: #fff5f5;
         }
 
-        @keyframes buttonFloat {
-            0%, 100% { transform: translateZ(100px); }
-            50% { transform: translateZ(30px); }
+        .info {
+            border-color: #3498db;
+            background-color: #f8fafc;
         }
 
-        .snowflake {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            filter: blur(2px);
-            pointer-events: none;
+        .safety {
+            border-color: #2ecc71;
+            background-color: #f0fff4;
         }
 
-        @keyframes snowfall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-            }
+        .advice {
+            border-color: #f1c40f;
+            background-color: #fffff0;
         }
 
-        .snow-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 1;
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
         }
 
-        .container {
-            z-index: 2;
-        }
-
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 80%;
-        }
-
-        .modal-text {
-            margin-bottom: 1rem;
-        }
-
-        .modal-btn {
-            padding: 0.5rem 1rem;
-            background: #0088cc;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .info-text {
-            color: white;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 2rem;
-            text-align: left;
-            font-size: 0.9em;
-            line-height: 1.6;
-        }
-
-        .info-text h2 {
-            color: #ffcc00;
-            margin-bottom: 1rem;
-        }
-
-        .info-text p {
-            margin-bottom: 1rem;
-        }
-
-        .info-text strong {
-            color: #ffcc00;
+        .content {
+            margin-top: 30px;
         }
 
         .emoji {
             font-size: 1.2em;
         }
+
+        ul, ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #ffe6e6;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
-    <div class="snow-container" id="snow"></div>
-    
-    <div class="container" id="mainContent" style="display: none;">
-        <div class="logo">
-            <img 
-                src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" 
-                alt="Kelinlar Logo"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
-            />
+    <div class="container">
+        <div class="header">
+            <img src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" alt="Sovchilar Logo" class="logo">
+            <h1 class="title">● SOVCHILAR ●</h1>
+            <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn">
+                Telegram kanalimizga qo'shiling 📱
+            </a>
         </div>
-        <h1 class="title">● SOVCHILAR ●</h1>
-        
-        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
-            <i class="fas fa-paper-plane"></i> Telegram
-        </a>
-        
-        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
-            <i class="fas fa-paper-plane"></i> Telegram
-        </a>
 
-        <div class="info-text">
-            <h2>DIQQAT! <span class="emoji">⚠️</span></h2>
-            <p>Hurmatli foydalanuvchilar, siz ko'rayotgan rasmlar sun'iy intellekt yordamida yaratilgan bo'lib, ular haqiqiy suratlar emas. Agar haqiqiy surat kerak bo'lsa, iltimos, o'sha shaxs bilan bog'laning yoki Telegram orqali murojaat qiling.</p>
-            <p><span class="emoji">😊</span> Rahmat! <span class="emoji">🌟</span></p>
-            <h3>Qo'shimcha ma'lumot:</h3>
-            <p>Agar siz ko'rgan rasm tanishingiz qiyofasiga o'xshab ketsa, bu tabiiy holat. Sun'iy intellekt zamonaviy texnologiyalar yordamida o'xshash yuzlarni yaratishi mumkin. Biz hech kimga zarar yetkazishni xohlamaymiz. Ushbu rasmlar faqat ijobiy maqsadlar uchun yaratilgan. Diqqat bilan qaralsa, ularning haqiqiy emasligini osongina anglash mumkin.</p>
-            <p><strong>Bizning maqsadimiz – sizga yordam berish.</strong> Telegram kanalimiz orqali ko'plab insonlar o'z juftini topib, oila qurganlar. Siz ham kanalimizga qo'shilib kuzatib boring – ehtimol, sizga mos juftlikni uchratishingiz mumkin.</p>
-            <p>Bugungi kunda ba'zi ijtimoiy tarmoqlarda, masalan, YouTube va Instagram'da shaxsiy suratlardan qonunga zid ravishda foydalanish holatlarini ko'rishimiz mumkin. <strong>Shunday firibgarlardan ehtiyot bo'ling!</strong> Bizning kanalimizda esa shaxsiy rasmlar aks etmaydi va bundan keyin ham bo'lmaydi.</p>
-            <p>Biz sun'iy intellekt yordamida rasmlar yaratib, ularni faqat o'z Instagram va Telegram kanallarimizga joylashtiramiz. Buning asosiy maqsadi:</p>
-            <ul>
-                <li>Moliyaviy ehtiyojni qoplash.</li>
-                <li>Kimdir o'z juftini topishi uchun yordam berish.</li>
-            </ul>
-            <p>Shuni unutmaslik kerakki, biz chiqarayotgan e'lonlar sizga zarar yetkazishni maqsad qilmaydi. Davlat qonunchiligiga zid bo'lgan materiallar umuman joylashtirilmaydi. Agar siz bizning kanalni kuzatib borsangiz, albatta mos juftlikni uchratishingiz mumkin.</p>
-            <p><span class="emoji">📌</span> <strong>Telegram kanalimizga tashrif buyuring, kuzatib boring va bizning yordamimizdan foydalaning!</strong></p>
-            <p>Rahmat!</p>
+        <div class="content">
+            <div class="info-block warning">
+                <h2>⚠️ DIQQAT! ⚠️</h2>
+                <p>Hurmatli foydalanuvchilar, siz ko'rayotgan rasmlar sun'iy intellekt yordamida yaratilgan. ❌ Bu rasmlar haqiqiy emas va asl suratlar emas!</p>
+                <p>📸 Agar haqiqiy surat kerak bo'lsa, shaxsning o'zidan so'rang yoki Telegram orqali murojaat qiling.</p>
+                <p>😊 Rahmat! 🌟</p>
+            </div>
+
+            <div class="info-block info">
+                <h2>📌 Qo'shimcha ma'lumot:</h2>
+                <p>Hozirgi kunda ba'zi blogerlar va kanallar odamlarning shaxsiy rasm va videolaridan skrinshot olib, ularning ustiga qonunga zid va yolg'on ma'lumotlar yozib e'lon qilishmoqda.</p>
+                <p class="highlight">🔴 Bunday e'lonlardan ehtiyot bo'ling!</p>
+                <p>Hech kim o'zini shunchalik pastga urib, yolg'on e'lon bermaydi. Shu sababli:</p>
+                <ul>
+                    <li>✅ Ularga Like 👍 bosmaslikni so'raymiz.</li>
+                    <li>✅ Firibgar kanallarni Spam qilib, ularga qarshi kurashing.</li>
+                </ul>
+                <p>Hozirda bunday yolg'on ma'lumot tarqatib yurgan shaxslarni tegishli organ xodimlari izlamoqda.</p>
+                <p class="highlight">Bunday yolg'on xabarlar qurboniga aylanmang! Aksincha, yolg'on xabar ko'rsangiz, befarq bo'lmay, Spam bering.</p>
+                <p>📌 Shunda ularning kanali bloklanadi va siz boshqa insonlarning qadr-qimmatini saqlashda o'z hissangizni qo'shgan bo'lasiz.</p>
+            </div>
+
+            <div class="info-block safety">
+                <h2>💡 Bizning kanalda nima uchun xavfsiz?</h2>
+                <p>Bizning kanalda:</p>
+                <ul>
+                    <li>✅ Hech qanday yolg'on axborot ko'zingizga tashlanmaydi.</li>
+                    <li>✅ Har bir e'lon ostida nomzodning telefon raqami, yoki Telegram username bo'ladi.</li>
+                </ul>
+                <p>Agar nomzod bilan bog'lanishni bilmasangiz, quyidagicha qilishingiz mumkin:</p>
+                <ol>
+                    <li>1️⃣ E'lon ostida "Telegram" yozuvi yonida username bo'ladi.</li>
+                    <li>2️⃣ Telegramning izlash bo'limiga o'sha username'ni kiriting va e'lon bergan inson bilan bog'laning.</li>
+                </ol>
+            </div>
+
+            <div class="info-block advice">
+                <h2>⚠️ Muhim maslahatlar:</h2>
+                <ul>
+                    <li>❌ Hech qachon sizga noma'lum bo'lgan shaxsga pul bermang!</li>
+                    <li>❌ Agar suhbatda pul mavzusi ochilsa, bunday insondan asta-sekin uzoqlashing!</li>
+                </ul>
+                <p>📌 Bunday insonlar bilan na baxtli bo'lasiz, na uzoq davom etadigan muloqot qura olasiz.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Hurmat bilan, Admin. 🌟</p>
         </div>
     </div>
-
-    <div class="modal" id="warningModal">
-        <div class="modal-content">
-            <p class="modal-text">ДИКААТ БАРЧА СИЗ КУРГАН РАСМЛАР СУВНИЙ ИНТЕЛЕКТ ЁРДАМИДА ТАЁРЛАНГАН БУ РАСМЛАР ХАКИКИЙ УЗИНИ РАСМИ ЭМАС.! Узини Расмини Узидан Суранг Телеграмига Ёзиб</p>
-            <button class="modal-btn" onclick="closeModal()">Розиман</button>
-        </div>
-    </div>
-
-    <script>
-        function createSnow() {
-            const snowContainer = document.getElementById('snow');
-            for(let i = 0; i < 50; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.className = 'snowflake';
-                snowflake.style.left = Math.random() * 100 + '%';
-                snowflake.style.opacity = Math.random();
-                snowflake.style.animation = `snowfall ${Math.random() * 3 + 2}s linear infinite`;
-                snowflake.style.animationDelay = Math.random() * 2 + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('warningModal').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
-        }
-
-        createSnow();
-    </script>
 </body>
 </html>
