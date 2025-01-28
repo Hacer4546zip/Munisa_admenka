@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovchilar - Muhim Ma'lumot</title>
+    <title>Sovchilar - Yangi Yil</title>
     <style>
         * {
             margin: 0;
@@ -10,218 +10,196 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-            padding: 10px;
+            background: url('https://i.postimg.cc/nLDpX6cW/2201-street-snowfall-winter-2160x3840.jpg') center/cover fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
             text-align: center;
-            margin-bottom: 20px;
+            position: relative;
+            margin: 2rem 0;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
+            background: #fff;
             border-radius: 50%;
-            margin: 0 auto 15px;
-            display: block;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            margin: 0 auto 30px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .title {
-            font-size: 2em;
-            color: #2c3e50;
-            margin-bottom: 15px;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(145deg, #0088cc, #25b4fd);
-            color: #fff;
-            text-decoration: none;
+            margin: 1rem;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            transition: all 0.3s ease;
-            font-size: 1em;
+            text-decoration: none;
+            color: white;
             font-weight: bold;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
-        .info-block {
-            background: #fff;
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .telegram {
+            background: linear-gradient(145deg, #0088cc, #25b4fd);
+        }
+
+        .info-text {
+            background: #f8f9fa;
+            padding: 2rem;
             border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 5px solid;
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.6;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .warning {
-            border-color: #ff4444;
-            background-color: #fff5f5;
+        .info-text h2 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
-        .info {
-            border-color: #3498db;
-            background-color: #f8fafc;
+        .info-text p {
+            margin-bottom: 1rem;
         }
 
-        .safety {
-            border-color: #2ecc71;
-            background-color: #f0fff4;
-        }
-
-        .advice {
-            border-color: #f1c40f;
-            background-color: #fffff0;
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .content {
-            margin-top: 20px;
+        .info-text strong {
+            color: #3498db;
         }
 
         .emoji {
             font-size: 1.2em;
         }
 
-        ul, ol {
-            padding-left: 20px;
-            margin: 10px 0;
+        .steps {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
         }
 
-        li {
-            margin-bottom: 8px;
+        .steps ol {
+            padding-left: 1.5rem;
         }
 
-        .highlight {
-            background-color: #ffe6e6;
-            padding: 2px 5px;
-            border-radius: 3px;
+        .note {
+            background: #ffeaa7;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 5px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            .logo {
-                width: 80px;
-                height: 80px;
-            }
-
-            .title {
-                font-size: 1.5em;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-
-            h2 {
-                font-size: 1.2em;
-            }
-
-            .info-block {
-                padding: 12px;
-            }
+        .rules {
+            background: #81ecec;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" alt="Sovchilar Logo" class="logo">
-            <h1 class="title">● SOVCHILAR ●</h1>
-            <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn">
-                Telegram kanalimizga qo'shiling 📱
-            </a>
+    <div class="container" id="mainContent">
+        <div class="logo">
+            <img 
+                src="https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png" 
+                alt="Kelinlar Logo"
+                style="width: 100%; height: 100%; object-fit: cover;"
+            />
         </div>
+        <h1 class="title">● SOVCHILAR ●</h1>
+        
+        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
+            <i class="fas fa-paper-plane"></i> Telegram
+        </a>
+        
+        <a href="https://t.me/+_rFTajPX3_1kMTg6" class="btn telegram">
+            <i class="fas fa-paper-plane"></i> Telegram
+        </a>
 
-        <div class="content">
-            <div class="info-block warning">
-                <h2>⚠️ DIQQAT! ⚠️</h2>
-                <p>Hurmatli foydalanuvchilar, siz ko'rayotgan rasmlar sun'iy intellekt yordamida yaratilgan. ❌ Bu rasmlar haqiqiy emas va asl suratlar emas!</p>
-                <p>📸 Agar haqiqiy surat kerak bo'lsa, shaxsning o'zidan so'rang yoki Telegram orqali murojaat qiling.</p>
-                <p>😊 Rahmat! 🌟</p>
-            </div>
-
-            <div class="info-block info">
-                <h2>📌 Qo'shimcha ma'lumot:</h2>
-                <p>Hozirgi kunda ba'zi blogerlar va kanallar odamlarning shaxsiy rasm va videolaridan skrinshot olib, ularning ustiga qonunga zid va yolg'on ma'lumotlar yozib e'lon qilishmoqda.</p>
-                <p class="highlight">🔴 Bunday e'lonlardan ehtiyot bo'ling!</p>
-                <p>Hech kim o'zini shunchalik pastga urib, yolg'on e'lon bermaydi. Shu sababli:</p>
-                <ul>
-                    <li>✅ Ularga Like 👍 bosmaslikni so'raymiz.</li>
-                    <li>✅ Firibgar kanallarni Spam qilib, ularga qarshi kurashing.</li>
-                </ul>
-                <p>Hozirda bunday yolg'on ma'lumot tarqatib yurgan shaxslarni tegishli organ xodimlari izlamoqda.</p>
-                <p class="highlight">Bunday yolg'on xabarlar qurboniga aylanmang! Aksincha, yolg'on xabar ko'rsangiz, befarq bo'lmay, Spam bering.</p>
-                <p>📌 Shunda ularning kanali bloklanadi va siz boshqa insonlarning qadr-qimmatini saqlashda o'z hissangizni qo'shgan bo'lasiz.</p>
-            </div>
-
-            <div class="info-block safety">
-                <h2>💡 Bizning kanalda nima uchun xavfsiz?</h2>
-                <p>Bizning kanalda:</p>
-                <ul>
-                    <li>✅ Hech qanday yolg'on axborot ko'zingizga tashlanmaydi.</li>
-                    <li>✅ Har bir e'lon ostida nomzodning telefon raqami, yoki Telegram username bo'ladi.</li>
-                </ul>
-                <p>Agar nomzod bilan bog'lanishni bilmasangiz, quyidagicha qilishingiz mumkin:</p>
+        <div class="info-text">
+            <h2>⚠️ DIQQAT! ⚠️</h2>
+            <p>Hurmatli foydalanuvchilar, siz ko'rayotgan rasmlar sun'iy intellekt yordamida yaratilgan. ❌ Bu rasmlar haqiqiy emas va asl suratlar emas!</p>
+            <p>📸 Agar haqiqiy surat kerak bo'lsa, shaxsning o'zidan so'rang yoki Telegram orqali murojaat qiling.</p>
+            <p><span class="emoji">😊</span> Rahmat! <span class="emoji">🌟</span></p>
+            
+            <h3>📌 Qo'shimcha ma'lumot:</h3>
+            <p>Mening kanal firibgar emas va sizni qandaydir qonunga zid bo'lgan ishlarga jalb qilmaydi. Bizning maqsadimiz – faqat yordam berish. ❤️</p>
+            <p>Agar siz:</p>
+            <ul>
+                <li>Baxtsiz bo'lsangiz,</li>
+                <li>Turmush o'rtog'ingiz bilan ajrashgan bo'lsangiz,</li>
+                <li>Yoki oila qurmagan bo'lsangiz,</li>
+            </ul>
+            <p>Mening kanalim orqali e'lon berib, o'z juftingizni topishingiz mumkin! 💑</p>
+            
+            <div class="steps">
+                <h4>📋 Buni qanday amalga oshirasiz?</h4>
                 <ol>
-                    <li>1️⃣ E'lon ostida "Telegram" yozuvi yonida username bo'ladi.</li>
-                    <li>2️⃣ Telegramning izlash bo'limiga o'sha username'ni kiriting va e'lon bergan inson bilan bog'laning.</li>
+                    <li>Telegram kanalimizga qo'shilasiz.</li>
+                    <li>Barcha e'lonlar ostida havola mavjud – havolani bosganingizda, mening Telegram akkauntimga o'tasiz va menga murojaat qilasiz.</li>
+                    <li>Men sizga:
+                        <ul>
+                            <li>Anketa to'ldirish havolasini,</li>
+                            <li>Anketa to'ldirish uchun video qo'llanmani yuboraman.</li>
+                        </ul>
+                    </li>
+                    <li>Agar anketa to'ldirishni bilmasangiz, videoga qarab osongina bajarishingiz mumkin.</li>
                 </ol>
             </div>
-
-            <div class="info-block advice">
-                <h2>⚠️ Muhim maslahatlar:</h2>
-                <ul>
-                    <li>❌ Hech qachon sizga noma'lum bo'lgan shaxsga pul bermang!</li>
-                    <li>❌ Agar suhbatda pul mavzusi ochilsa, bunday insondan asta-sekin uzoqlashing!</li>
-                </ul>
-                <p>📌 Bunday insonlar bilan na baxtli bo'lasiz, na uzoq davom etadigan muloqot qura olasiz.</p>
+            
+            <div class="note">
+                <h4>💡 Eslatma:</h4>
+                <p>Men kanalimni rivojlantirish va ko'plab obunachilarni jalb qilish uchun ko'p vaqt va mehnat sarfladim. Shu sababli, sizning e'loningizni kanalimda joylashtirish uchun xizmat haqqi olinadi.</p>
+                <p>📌 Iltimos, to'g'ri tushuning! E'loningizni shunchaki joylashtirib bera olmayman.</p>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>Hurmat bilan, Admin. 🌟</p>
+            
+            <div class="rules">
+                <h4>⚖️ Ichki qoidalar:</h4>
+                <p>Agar kanalimda e'lon bermoqchi bo'lsangiz, albatta:</p>
+                <ol>
+                    <li>Kanal ichki qonun-qoidalari bilan tanishib chiqing. Bu siz uchun foydali bo'ladi.</li>
+                    <li>O'zgalar yoki tanishlaringiz nomidan e'lonlar qabul qilinmaydi.</li>
+                </ol>
+                <p>Agar boshqa kanallarda e'lon berishni xohlasangiz, menda hech qanday qarshilik yo'q. Bu – sizning qaroringiz. ✅</p>
+            </div>
+            
+            <p><strong>Xurmat bilan, Admin 🌟</strong></p>
         </div>
     </div>
+
+    <script>
+        // Agar kerak bo'lsa, JavaScript kodini bu yerga qo'shishingiz mumkin
+    </script>
 </body>
