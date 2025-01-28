@@ -14,49 +14,49 @@
             line-height: 1.6;
             color: #333;
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 10px;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: block;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
         .title {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #2c3e50;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 12px 24px;
             background: linear-gradient(145deg, #0088cc, #25b4fd);
             color: #fff;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
         }
 
@@ -68,8 +68,8 @@
         .info-block {
             background: #fff;
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border-left: 5px solid;
         }
@@ -96,12 +96,12 @@
 
         h2 {
             color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-size: 1.3em;
         }
 
         .content {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .emoji {
@@ -125,10 +125,42 @@
 
         .footer {
             text-align: center;
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 20px;
+            padding: 15px;
             color: #7f8c8d;
             border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .title {
+                font-size: 1.5em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .info-block {
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -193,4 +225,3 @@
         </div>
     </div>
 </body>
-</html>
